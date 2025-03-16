@@ -1,0 +1,90 @@
+.customer-payments {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .payment-history {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .payment-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+  }
+  
+  .payment-card:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .payment-date,
+  .payment-amount,
+  .payment-barber,
+  .payment-status {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .payment-status.completed {
+    color: green;
+  }
+  
+  .payment-status.refunded {
+    color: red;
+  }
+  
+  .payment-status.pending {
+    color: orange;
+  }
+  
+  .no-payments {
+    text-align: center;
+    color: #888;
+    font-size: 16px;
+  }
+  
+  .add-payment-method {
+    margin-top: 30px;
+  }
+  
+  .add-payment-method h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .add-payment-method input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .add-payment-method button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-payment-method button:hover {
+    background-color: #0056b3;
+  }
+  

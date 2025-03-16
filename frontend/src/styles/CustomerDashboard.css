@@ -1,0 +1,248 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed; /* Stick to the top of the screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding: 0.5rem 1rem; /* Adjusted padding for reduced height */
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 0.5rem; /* Reduced margin */
+  font-size: 1.3rem; /* Adjust font size */
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #f7c04a;
+}
+
+.navbar .cta-btn {
+  padding: 0.4rem 1rem; /* Reduced padding */
+  background-color: #f7c04a;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .cta-btn:hover {
+  background-color: #f7a500;
+}
+
+.navbar .dark-mode-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 60px; /* Adjusted to sit below the navbar */
+  left: 0;
+  height: calc(100vh - 60px); /* Dynamic height calculation */
+  overflow-y: auto;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  transition: width 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+.sidebar.collapsed {
+  width: 60px; /* Width when collapsed */
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 1rem auto; /* Center the button in the sidebar */
+  display: block;
+  color: #333;
+}
+
+.sidebar h2 {
+  font-size: 1.3rem; /* Adjusted font size */
+  margin-bottom: 1rem;
+  color: #f7c04a;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed h2 {
+  opacity: 0; /* Hide the title when collapsed */
+  pointer-events: none;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.sidebar.collapsed a {
+  justify-content: center;
+  padding: 0.8rem;
+}
+
+.sidebar.collapsed a span {
+  display: none; /* Hide text when collapsed */
+}
+
+.sidebar a:hover {
+  background-color: #f7c04a;
+  color: #fff;
+}
+
+.sidebar a svg {
+  margin-right: 0.5rem;
+  transition: margin 0.3s ease;
+}
+
+.sidebar.collapsed a svg {
+  margin: 0; /* Center icons when collapsed */
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  padding: 2rem;
+  margin-top: 70px; /* Ensure content is below the navbar */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
+}
+
+.dashboard-content h1 {
+  font-size: 2rem;
+  color: #f7c04a;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Search Bar Container */
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  width: 100%; /* Ensure it spans the container width */
+}
+
+/* Search Bar Input (3 parts) */
+.search-input {
+  flex: 3; /* Occupies 3 parts of the ratio */
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+
+/* Location Dropdown (1 part) */
+.search-dropdown {
+  flex: 1; /* Occupies 1 part of the ratio */
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+
+/* Search Button (1 part) */
+.search-button {
+  flex: 1; /* Occupies 1 part of the ratio */
+  padding: 0.75rem 1.5rem;
+  background-color: #f7c04a;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #f7a500;
+}
+
+
+/* Widgets */
+.widget-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.widget {
+  flex: 1 1 30%;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.widget:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.widget h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.widget p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .sidebar {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .widget {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-mode .search-input,
+body.dark-mode .search-dropdown {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}

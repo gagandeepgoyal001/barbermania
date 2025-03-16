@@ -1,0 +1,23 @@
+/* Reusing Login Page CSS */
+.register-container {
+    /* Same as login-container */
+}
+
+h2, .form-group, label, input, .btn-primary, p a {
+    /* Same as Login Page */
+}
+
+/* Select Styling */
+select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 0.2rem;
+}
+
+select:focus {
+    outline: none;
+    border-color: #007bff;
+}

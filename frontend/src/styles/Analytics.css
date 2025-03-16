@@ -1,0 +1,32 @@
+.analytics {
+    padding: 2rem;
+    text-align: center;
+}
+
+.analytics-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.analytics-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.analytics-card p {
+    font-size: 1.2rem;
+    color: #28a745;
+    font-weight: bold;
+}
